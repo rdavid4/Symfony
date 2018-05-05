@@ -1,0 +1,32 @@
+
+{% extends 'default/menu.html.twig' %}
+{% block title %}Resultado productos{% endblock %}
+
+{% block body %}
+	{%  block header %}<h1>Productos</h1>{% endblock %}
+	<script src="../../public/ajax/script1.js"></script>
+<div id="tabla_resultado"></div>
+	<input type="text" name="texto" id="texto">
+<table class="table">
+<tr>
+		<th>Producto</th>
+		<th>Precio</th>
+		<th>Descripcion</th>
+		<th>Categoria</th>
+		<th></th>
+		<th></th>
+</tr>
+
+{% for valor in product %}
+<tr>
+
+	<td>{{ valor.name}} </td>
+	<td>{{ valor.price}} </td>
+	<td>{{ valor.description}} </td>
+	<td>{{ valor.category}} </td>
+	<td><a href="/product/delete/{{ valor.id }}">Eliminar</a></td>
+	<td><a href="/product/edit/{{ valor.id }}">Editar</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'default/menu.html.twig' %}
+
+{% block title %}Nuevo producto{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="display-1"> Formulario {{ nombre }}</h1>
+
+        {#comentario: ESTA ES LA SINTAXIS PARA CLASES EN FORMULARIO TWIG#}
+            {{ form_start(form) }}
+            {{ form_row(form.name,{'attr': {'class': 'form-control'}}) }}
+            {{ form_row(form.price,{'attr': {'class': 'form-control'}}) }}
+            {{ form_row(form.description,{'attr': {'class': 'form-control'}}) }}
+            {{ form_row(form.id,{'attr': {'class': 'form-control'}}) }}
+            {{ form_row(form.save,{'attr': {'class': 'btn btn-block btn-outline-primary'}}) }}
+            {{ form_end(form) }}
+
+
+    </div>
+
+
+
+{% endblock %}

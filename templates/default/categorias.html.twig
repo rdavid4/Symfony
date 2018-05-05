@@ -1,0 +1,22 @@
+
+{% extends 'default/menu.html.twig' %}
+{% block title %}Resultado categorias{% endblock %}
+
+{% block body %}
+    {%  block header %}<h1>Categorias</h1>{% endblock %}
+
+    <table class="table">
+        <tr>
+            <th>Categoria</th>
+            <th></th>
+        </tr>
+
+        {% for valor in category %}
+            <tr>
+                <td>{{ valor.name}} </td>
+                <td><a href="/category/delete/{{ valor.id }}">Eliminar</a></td>
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}
