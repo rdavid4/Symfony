@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Repository\ProductRepository;
 
 class ProductController extends Controller
-
+//Todas los metodos relativos a los productos
 {
     /**
      * @Route("/product", name="product")
